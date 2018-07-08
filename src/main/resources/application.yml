@@ -1,0 +1,40 @@
+
+server:
+  port: 9001
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/oauth?useSSL=false
+    username: oauth
+    password: 123
+    type: org.apache.commons.dbcp.BasicDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+    
+logging:
+  file: logs/oauth.log
+  level:
+    root: warn
+    org.springframework: info
+    io.github.bxo: info
+
+
+
+
